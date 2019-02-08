@@ -1,0 +1,184 @@
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main_content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white">
+
+
+
+    <android.support.v7.widget.Toolbar
+
+        android:id="@+id/my_awesome_toolbar"
+        android:layout_height="@dimen/abc_action_bar_default_height_material"
+        android:layout_width="match_parent"
+        android:minHeight="@dimen/abc_action_bar_default_height_material"
+        android:background="?attr/colorPrimary"
+
+        />
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/cardview_dark_background"
+        android:scrollbars="none"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+
+            <ImageView
+                android:id="@+id/backdrop"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:fitsSystemWindows="true" />
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/movie"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:elevation="5sp"
+                android:layout_below="@+id/backdrop"
+                app:cardCornerRadius="5sp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="10dp"
+                    android:id="@+id/rel">
+
+                    <TextView
+                        android:id="@+id/movie_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5sp"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:padding="5dp"
+                        android:textColor="@android:color/black"
+                        android:textSize="24sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/genre"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/movie_title"
+                        android:layout_marginBottom="5sp"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:padding="5dp"
+                        android:textColor="@android:color/black"
+                        android:textSize="14sp" />
+
+                    <LinearLayout
+                        android:id="@+id/rating"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/genre"
+                        android:orientation="horizontal"
+                        android:weightSum="1.5">
+
+                        <TextView
+                            android:id="@+id/date"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_weight="0.5"
+                            android:textSize="14sp" />
+
+
+                        <TextView
+                            android:id="@+id/ratings"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="end"
+                            android:layout_weight="0.5"
+                            android:gravity="center_horizontal"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:id="@+id/runtime"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="end"
+                            android:layout_weight="0.5"
+                            android:gravity="center_horizontal"
+                            android:textSize="14sp" />
+
+
+                    </LinearLayout>
+
+
+                    <TextView
+                        android:id="@+id/overview"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/rating"
+                        android:layout_marginTop="5sp"
+                        android:ellipsize="end"
+
+                        android:textColor="@color/cardview_dark_background"
+                        android:textSize="14sp"
+                        android:typeface="sans" />
+
+                    <TextView
+                        android:id="@+id/tv_videos"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/overview"
+                        android:layout_marginTop="5sp"
+                        android:ellipsize="end"
+                        android:text="Videos"
+                        android:textColor="@color/cardview_dark_background"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:typeface="sans"
+                        android:visibility="invisible" />
+
+                    <fragment
+                        android:id="@+id/youtube_fragment"
+                        android:name="com.google.android.youtube.player.YouTubePlayerFragment"
+                        android:layout_width="match_parent"
+                        android:layout_height="300sp"
+                        android:layout_below="@+id/tv_videos"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+
+<!--
+                    <com.google.android.youtube.player.YouTubePlayerView
+                        android:id="@+id/trailer"
+                        android:layout_width="match_parent"
+                        android:layout_below="@+id/tv_videos"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_height="wrap_content">
+
+                    </com.google.android.youtube.player.YouTubePlayerView>
+-->
+
+                </RelativeLayout>
+
+
+            </android.support.v7.widget.CardView>
+
+            <Button
+                android:id="@+id/add_to_watch"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/movie"
+                android:layout_margin="4sp"
+                android:background="@android:color/holo_orange_light"
+                android:text="Add to watchlist"
+                android:textAllCaps="false" />
+
+
+        </RelativeLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+</android.support.design.widget.CoordinatorLayout>

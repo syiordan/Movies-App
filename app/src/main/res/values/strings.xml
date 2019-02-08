@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Movie Pocket</string>
+    <string name="search_movies">Search a movie</string>
+    <string name="movie_details"> </string>
+    <string name="base_url">https://api.themoviedb.org/3/</string>
+    <string name="api_key">6b2e856adafcc7be98bdf0d8b076851c</string>
+    <string name="title_list_list">Details</string>
+    <string name="title_list_detail">List Detail</string>
+    <string name="youtube_key">AIzaSyCPmARboNNcszBZKyZk6qcE_GOJeS0YtPg</string>
+    <string name ="img_base"></string>
+
+</resources>

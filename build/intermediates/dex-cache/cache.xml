@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="false"
+        jar="/Users/iqtaxi/Documents/movies_app-master/app/libs/YouTubeAndroidPlayerApi.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.0"
+        sha1="3c4f96ff493456651cc7bdb0b47e10eb25545a16">
+        <dex dex="/Users/iqtaxi/Documents/movies_app-master/app/build/intermediates/pre-dexed/debug/YouTubeAndroidPlayerApi_c54fddd64254805d0e23cb542c2fe0f4b9106de8.jar" />
+    </item>
+
+</items>
